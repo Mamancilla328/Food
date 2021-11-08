@@ -94,9 +94,9 @@ export const OrderDiet = (data) => {
       return dispatch({ type: ORDER_TYPE, payload: data});
       }  
   }
-  
 
-export const statusFilter =(status)=>{
+
+ export const statusFilter =(status)=>{
     return{
         type: FILTER_RECIPE,
         payload: status

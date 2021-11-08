@@ -4,7 +4,7 @@ const {
 } = process.env;
 const axios = require ('axios');
 const { Recipe, Diet } = require('../db.js');
-const Diets = require('../models/Diet.js');
+
 
 const getApiInfo = async () => {
     const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=100&addRecipeInformation=true`);
@@ -39,7 +39,7 @@ const getDbInfo = async () => {
 const getAllRecipes = async () => {
     const apiInfo = await getApiInfo();
     const dbInfo = await getDbInfo();
-
+    // const All = [...apiInfo];
     const All = [...apiInfo,...dbInfo];
 
     return All
