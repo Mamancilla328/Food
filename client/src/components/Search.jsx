@@ -14,14 +14,11 @@ function Search() {
     const dispatch = useDispatch()
 
     const handleOnChange = (e)=>{
-        e.preventDefault()
         setInput(e.target.value)
     }
 
     const onSubmit = (e)=>{
-        e.preventDefault()
         dispatch(setRecipeName(input))
-        dispatch(getRecipes({name:input})) 
         setInput("")
     }
 

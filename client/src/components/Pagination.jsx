@@ -20,3 +20,7 @@ export function Pagination({postsPerPage, totalPosts, paginate}){
         </nav>
     </div>)
 }
+
+                {/* <button className='buttons' disabled={page -1 === 0} onClick={()=> {changePage(page -1)}}><IoIosArrowBack/></button>
+                    <label>{number}</label>
+                <button className='buttons' disabled={recipes?.count <= (page * 5)} onClick={()=>{changePage(page +1)}}><IoIosArrowForward/></button> */}

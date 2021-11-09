@@ -32,14 +32,14 @@ function Order(){
     return (
         <div className="filterContainers">
         <div>
-        <select className="filter" onChange={(event)=> handleChangeOrder(event)}>
+        <select className="filter" onChange={(event)=> handleChangeDiets(event)}>
             <option value="All">Diets</option>
             {allDiets.map(d => 
             <option value={d.name}>{d.name}</option>)}
         </select>
         </div>
         <div>
-        <select className="filter" onChange={(event)=> handleChangeDiets(event)}> 
+        <select className="filter" onChange={(event)=> handleChangeOrder(event)}> 
             <option value="A-Z">Order</option>
             <option value="A-Z">A-Z</option>
             <option value="Z-A">Z-A</option>
@@ -51,11 +51,7 @@ function Order(){
     )  
 }
 
-
-
-
-
-
+export default Order
 
 // import "./Order.css"
 // import React from 'react'
@@ -106,8 +102,6 @@ function Order(){
 //         </>
 //     )
 // }
-
-export default Order
 
 
 

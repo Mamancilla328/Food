@@ -14,10 +14,10 @@ const Home = () => {
     const recipesFilter = useSelector(state => state.recipesFilter)
     const filterBy = useSelector(state => state.filterBy)
     const orderBy = useSelector(state => state.orderBy)
-    // const [page,setPage] = useState(1)
-    // useEffect(()=>{
-    //    dispatch(getRecipes({})) 
-    // },[])
+    
+    useEffect(()=>{
+       dispatch(getRecipes({})) 
+    },[])
 
     const [posts, setPosts]= useState(recipes);
     const [currentPage, setCurrentPage]= useState(1);
@@ -28,7 +28,6 @@ const Home = () => {
     const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost)
 
    useEffect(()=>{
-    dispatch(getRecipes({}))
      if(filterBy === "All" && orderBy === "All"){
        setPosts(recipes)
      }else{
@@ -49,7 +48,6 @@ const Home = () => {
     return (
         <div className='container'>
             <div className='buttsBox'>
-
             {
                 currentPosts.map((e)=>{
                     return <Card image={e.image} name={e.name} id={e.id} diets= {e.diets} spoonacularScore={e.spoonacularScore}  />
@@ -59,9 +57,6 @@ const Home = () => {
 
             <div className='butts'>
             <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
-                {/* <button className='buttons' disabled={page -1 === 0} onClick={()=> {changePage(page -1)}}><IoIosArrowBack/></button>
-                    <label>{page}</label>
-                <button className='buttons' disabled={recipes?.count <= (page * 5)} onClick={()=>{changePage(page +1)}}><IoIosArrowForward/></button> */}
             </div>
             
         </div>

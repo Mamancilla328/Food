@@ -1,14 +1,11 @@
 import axios from 'axios'
-export const GET_ALL_RECIPES = "GET_ALL_RECIPES"
-export const GET_ALL_DIETS = "GET_ALL_DIETS"
-export const SET_RECIPE_NAME = "SET_RECIPE_NAME"
-export const ORDER_TYPE = "ORDER_TYPE"
-export const FILTER_DIETS = "FILTER_DIETS"
-export const SET_PAGE = "SET_PAGE"
-export const GET_RECIPE = "GET_RECIPE"
 export const CREATE_RECIPE = "CREATE_RECIPE"
-export const FILTER_RECIPE = "FILTER_RECIPE"
-
+export const GET_ALL_DIETS = "GET_ALL_DIETS"
+export const GET_RECIPE_BYID = "GET_RECIPE_BYID"
+export const GET_ALL_RECIPES = "GET_ALL_RECIPES"
+export const RECIPE_NAME = "RECIPE_NAME"
+export const FILTER_DIETS = "FILTER_DIETS"
+export const ORDER_TYPE = "ORDER_TYPE"
 
 
 export const createRecipe= (recipe)=> {
@@ -16,7 +13,8 @@ export const createRecipe= (recipe)=> {
         axios.post(`http://localhost:3001/Recipes/add`, recipe)
         .then(response =>{
             return dispatch({
-                type: CREATE_RECIPE
+                type: CREATE_RECIPE,
+                payload: response.data
             })
         })
         .catch((err)=>{
@@ -45,7 +43,7 @@ export const getRecipe = (id)=>{
         try {
             const result = await axios.get(`http://localhost:3001/Recipes/${id}`)
             return dispatch({
-                type: GET_RECIPE,
+                type: GET_RECIPE_BYID,
                 payload: result.data
             })
 
@@ -69,39 +67,23 @@ export const getRecipes = ({name})=>{
     }
 }
 export const setRecipeName = (name)=>{
+    console.log('hola', name)
     return{
-        type: SET_RECIPE_NAME,
+        type: RECIPE_NAME,
         payload: name
     }
 }
-export const setPage = (page)=>{
-    return{
-        type: SET_PAGE,
-        payload: page
-    }
-}
-
 export const OrderDiet = (data) => {
     return (dispatch) => {
-      console.log(data)
       return dispatch({ type: FILTER_DIETS, payload: data});
       }  
   }
      
   export const OrderType = (data) => {
     return (dispatch) => {
-      console.log(data)
       return dispatch({ type: ORDER_TYPE, payload: data});
       }  
   }
-
-
- export const statusFilter =(status)=>{
-    return{
-        type: FILTER_RECIPE,
-        payload: status
-    }
-}
 
 
 
