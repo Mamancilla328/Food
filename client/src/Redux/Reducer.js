@@ -15,7 +15,7 @@
         recipes:[],
         recipe:{},
         recipesFilter: [],
-        name: '',
+        name:"",
         diets:[],
         newRecipe: {},
         orderBy : "All",
@@ -65,11 +65,11 @@
                     }
             case ORDER_TYPE: 
                 switch (payload) {
-                   case "HighToLow":
+                   case "LowToHigh":
                      return {...state,  recipesFilter: [...state.recipesFilter.sort((a,b) => (a.score > b.score) ? 1 : ((b.score > a.score) ? -1 : 0))],
                      orderBy: payload
                    }
-                   case "LowToHigh":
+                   case "HighToLow":
                        return {...state,  recipesFilter: [...state.recipesFilter.sort((a,b) => (a.score < b.score) ? 1 : ((b.score < a.score) ? -1 : 0))],
                        orderBy: payload
                        }

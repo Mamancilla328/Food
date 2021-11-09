@@ -36,10 +36,6 @@ const Home = () => {
      setCurrentPage(1)
    }, [recipes, recipesFilter, filterBy, orderBy])
 
-    // const changePage = (page)=>{
-    //     dispatch(getRecipes({page}))
-    //     setPage(page)
-    // }
 
     function paginate(pageNumber){
         setCurrentPage(pageNumber)
@@ -50,7 +46,7 @@ const Home = () => {
             <div className='buttsBox'>
             {
                 currentPosts.map((e)=>{
-                    return <Card image={e.image} name={e.name} id={e.id} diets= {e.diets} spoonacularScore={e.spoonacularScore}  />
+                    return <Card image={e.image} name={e.name} id={e.id} diets= {e.diets} />
                 })
             }
             </div>
@@ -65,11 +61,3 @@ const Home = () => {
 
 export default Home
 
-// {
-//     currentPosts.map(rec => (
-//       <Link to={`/recipe/details/${rec.id}`}>
-//            <div className="RecipeHome">
-//          <RecipesCards title={rec.title} spoonacularScore={rec.spoonacularScore} diets={rec.diets} image={rec.image} />
-//            </div>
-//         </Link>
-//     ))}  

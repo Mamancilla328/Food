@@ -1,30 +1,35 @@
-import "./Search.css"
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import styled from 'styled-components'
-import { getRecipes, setRecipeName } from '../Redux/Actions.js'
+import "./Search.css";
+import React from 'react';
+import { useState } from "react";
+
+import { useDispatch } from 'react-redux';
+import { getRecipes, setRecipeName } from '../Redux/Actions.js';
 import { IoIosSearch } from "react-icons/io";
 
-const SearchInput = styled.input`
 
-`
 function Search() {
-    const [input, setInput] = React.useState("")
+    const [name, setName] = useState("")
 
     const dispatch = useDispatch()
 
+
     const handleOnChange = (e)=>{
-        setInput(e.target.value)
+        e.preventDefault()
+        setName(e.target.value)
     }
 
-    const onSubmit = (e)=>{
-        dispatch(setRecipeName(input))
-        setInput("")
+    const handleOnSubmit = (e)=>{
+        e.preventDefault()
+
+        dispatch(setRecipeName(name))
+        dispatch(getRecipes({name:name}))
+        setName("")
     }
+
 
     return (
-        <form onSubmit={onSubmit} className="form">
-            <SearchInput type="text" placeholder="Search..." onChange={handleOnChange} value={input} className="Search"/>
+        <form onSubmit={handleOnSubmit} className="form">
+            <input type="text" placeholder="Search..." onChange={handleOnChange} value={name} className="Search"/>
             <button type="submit" className="lupa" ><IoIosSearch/></button>
         </form>
     )

@@ -12,8 +12,8 @@ const Card = ({image,name,id, diets,score}) => {
             <img src={image} alt={name}/>
             </div>
             <div className="info">
-            <NavLink to={`/Recipes/${id}`}>{name}</NavLink>
-            <p>{diets.join('-')}</p>
+            <NavLink to={`/Recipes/${id}`} className='font'>{name}</NavLink>
+            <p className='font'>{diets.join(', ')}</p>
             <p>{score}</p>
             </div>
             </div>

@@ -53,6 +53,7 @@ export const getRecipe = (id)=>{
     }
 }
 export const getRecipes = ({name})=>{
+    console.log(name)
     return (dispatch)=>{
         axios.get(`http://localhost:3001/Recipes?name=${name?name:""}`)
         .then(recipe =>{
@@ -67,7 +68,6 @@ export const getRecipes = ({name})=>{
     }
 }
 export const setRecipeName = (name)=>{
-    console.log('hola', name)
     return{
         type: RECIPE_NAME,
         payload: name

@@ -19,7 +19,7 @@ const getApiInfo = async () => {
             summary: e.summary,
             score: e.spoonacularScore,
             healthScore: e.healthScore,
-            instructions: e.analyzedInstructions.map( e => e ),
+            instructions: e.analyzedInstructions.map( e => e.steps.step ),
         }
     });
     return apiInfo;
@@ -40,7 +40,7 @@ const getDbInfo = async () => {
 const getAllRecipes = async () => {
     const apiInfo = await getApiInfo();
     const dbInfo = await getDbInfo();
-    // const All = [...apiInfo];
+   
     const All = [...apiInfo,...dbInfo];
 
     return All

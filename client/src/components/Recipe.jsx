@@ -34,18 +34,18 @@ function Recipe(props) {
              <div className="CardDetails">
                  <div><h2>{recipe.name}</h2></div>
                  <div><img src={recipe.image} alt={recipe.name}/></div>
-                 <label><strong>Diets</strong></label>
+                 <label><strong>Diets:</strong></label>
                  <div>{recipe.diets?.join(', ')}</div>
-                 <label><strong>Dish type</strong></label>
+                 <label><strong>Dish type:</strong></label>
                  <div>{recipe.dishTypes}</div>
-                 <label><strong>Summary</strong></label>
+                 <label><strong>Summary:</strong></label>
                  <div dangerouslySetInnerHTML={{__html: recipe.summary}}/>
-                 <label><strong>Score</strong></label>
-                 <div>{recipe.spoonacularScore}</div> 
-                 <label><strong>Healthscore</strong></label>
+                 <label><strong>Score:</strong></label>
+                 <div>{recipe.score}</div> 
+                 <label><strong>Healthscore:</strong></label>
                  <div>{recipe.healthScore}</div>
-                 <label><strong>Instructions</strong></label>
-                 <div>{recipe.analyzedInstructions}</div>   
+                 <label><strong>Instructions:</strong></label>
+                 <div>{recipe.instructions}</div>   
              </div>
           </div>
       </div>) 

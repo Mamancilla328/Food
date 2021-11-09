@@ -1,4 +1,4 @@
-import './Form.module.css'
+import './Form.css'
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector} from "react-redux";
 import { createRecipe, getDiets } from "../Redux/Actions.js";
@@ -20,7 +20,7 @@ export default function Form(){
 
     useEffect(() => {
     dispatch(getDiets())
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []) 
    
     const dietsMap = useSelector(store => store.diets)
 
@@ -39,24 +39,21 @@ export default function Form(){
 
     function HandleDiets(event){
         setRecipeInfo({
-            ...recipeInfo,       //buscar si hay otra forma de hacerlo //selectedOptions
+            ...recipeInfo,    
             [event.target.name]: Array.from(event.target.selectedOptions).map(p=> p.value)
         })
     }
-  
-     //Ver required
 
-     //Ver porque me renderiza object en las diets
     return(
     <div className="Create_createContainer">
         <form onSubmit={(event) => handleSubmit(event)}>
             <div className="Create_Form">
                <label>Title : </label>
-               <input placeholder="insert title..." type="text" name="title" value={recipeInfo.title} onChange={HandleChange} required/>
+               <input placeholder="Name" type="text" name="title" value={recipeInfo.title} onChange={HandleChange} required/>
             </div>
             <div className="Create_Form">
                <label>Summary : </label> 
-               <textarea placeholder="insert description..." type="text" name="summary" value={recipeInfo.summary} onChange={HandleChange} required/>
+               <textarea placeholder="About by recipe..." type="text" name="summary" value={recipeInfo.summary} onChange={HandleChange} required/>
             </div>
             <div className="Create_Form">
                <label>Score : </label> 
@@ -68,11 +65,11 @@ export default function Form(){
             </div>
             <div className="Create_Form">
                <label>Instructions : </label> 
-               <textarea placeholder="step by step..." type="text" name="analyzedInstructions" value={recipeInfo.analyzedInstructions} onChange={HandleChange} required/>
+               <textarea placeholder="Step by Step..." type="text" name="analyzedInstructions" value={recipeInfo.analyzedInstructions} onChange={HandleChange} required/>
             </div>
             <div className="Create_Form">
                <label>Image : </label> 
-               <input placeholder="url..." type="url" name="image" value={recipeInfo.image} onChange={HandleChange} required/>
+               <input placeholder="Url..." type="url" name="image" value={recipeInfo.image} onChange={HandleChange} required/>
             </div>
             <div className="Create_Form">
             <label>Diets : </label> 
@@ -83,7 +80,7 @@ export default function Form(){
             </select>
             </div>
             <div className="Create_SubmitForm">
-                <input type="submit" value="Send"/>
+                <input type="submit" value="CREATE"/>
             </div>
         </form>
     </div>)

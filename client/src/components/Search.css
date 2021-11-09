@@ -3,17 +3,17 @@
 
 
 .Search{
-    background-color: #FFE3E3;
+    color: #FFA0A0;
+    background-color: #fadbdb;
     border:none;
     border-radius: 9999px;
     font-family: 'Poppins', sans-serif;
-    
     outline: none;
     padding-left: 15px;
     width: 250px;
 }
 .Search:hover{
-    background-color:lavenderblush;
+    background-color:#FFE3E3;
 }
 
 .lupa{
