@@ -57,10 +57,14 @@ function Recipe(props) {
             <strong>Healthscore:</strong>
           </label>
           <div>{recipe.healthScore}</div>
-          <label>
-            <strong>Instructions:</strong>
-          </label>
-          <div>{recipe.instructions}</div>
+          {!!recipe.instructions && (
+            <>
+              <label>
+                <strong>Instructions:</strong>
+              </label>
+              <div>{recipe.instructions}</div>
+            </>
+          )}
         </div>
       </div>
     </div>
