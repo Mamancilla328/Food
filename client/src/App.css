@@ -1,6 +1,5 @@
-.App{
-  
-  background-image: url('./Marmol.jpeg');
+.App {
+  background-image: url("./Marmol.jpeg");
   background-size: cover;
   width: 100vw;
   min-height: 100vh;

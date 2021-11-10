@@ -1,39 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
-
-
-.Search{
-    color: #FFA0A0;
-    background-color: #fadbdb;
-    border:none;
-    border-radius: 9999px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    padding-left: 15px;
-    width: 250px;
+.Search {
+  color: #ffa0a0;
+  background-color: #fadbdb;
+  border: none;
+  border-radius: 9999px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  padding-left: 15px;
+  width: 250px;
 }
-.Search:hover{
-    background-color:#FFE3E3;
+.Search:hover {
+  background-color: #ffe3e3;
 }
 
-.lupa{
-    display: flex;
-    align-items: center;
-    border: solid 2px transparent;
-    border-radius: 9999px;
-    background-color: transparent;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #FFA0A0;
-    right: 0rem;
-    outline: none !important;
+.lupa {
+  display: flex;
+  align-items: center;
+  border: solid 2px transparent;
+  border-radius: 9999px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffa0a0;
+  right: 0rem;
+  outline: none !important;
 }
 
-.lupa:hover{
-    color: #FFE3E3;
+.lupa:hover {
+  color: #ffe3e3;
 }
 
-.form{
-    display: flex;
-    align-items: center;
+.form {
+  display: flex;
+  align-items: center;
 }

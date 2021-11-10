@@ -1,44 +1,41 @@
- 
-  .landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../Marmol.jpeg');
-    background-size: cover;
-    ;
-  }
-  
-  .photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    cursor: pointer;
-    border: solid 2px transparent ;
-    border-radius: 999px;
-    /* width: 3rem;
-    height: 3rem; */
-    
-    outline: none !important;
-    animation-duration: 1.5s;
-    animation-name: logo;
-    animation-iteration-count: infinite;
-  }
-
-  .photo:hover{
-    color: #FFE3E3;
-
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../Marmol.jpeg");
+  background-size: cover;
 }
-  
-  @keyframes logo {
-    50% {
-      width: 700px;
-      height: 300px;
-    }
-  
-    50% {
-      width: 600px;
-      height: 200px;
-    }
+
+.photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  border: solid 2px transparent;
+  border-radius: 999px;
+  /* width: 3rem;
+    height: 3rem; */
+
+  outline: none !important;
+  animation-duration: 1.5s;
+  animation-name: logo;
+  animation-iteration-count: infinite;
+}
+
+.photo:hover {
+  color: #ffe3e3;
+}
+
+@keyframes logo {
+  50% {
+    width: 700px;
+    height: 300px;
   }
+
+  50% {
+    width: 600px;
+    height: 200px;
+  }
+}
