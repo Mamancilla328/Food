@@ -11,17 +11,17 @@
   border-radius: 5px;
   left: 348px;
   bottom: 10px;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  justify-content:flex-end;
+  align-content:flex-end;
+  align-items:flex-end;
   flex-direction: column;
   width: 50%;
 }
 
 .Create_Form {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-top: 14px;
   padding: 2px;
   padding-bottom: 20px;
@@ -35,29 +35,31 @@
 
 .Create_Form textarea {
   resize: none;
-  height: 120px;
+  height: 200px;
+  width: 300px;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(155, 18, 18);
-  color: white;
-  border: 1px solid rgb(92, 1, 1);
+  background-color:#fadbdb;
+  color: #e98580;
+  border: none;
   outline: none;
 }
 
 .Create_Form input {
   resize: none;
-  color: white;
+  width: 310px;
+  color: #e98580;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(155, 18, 18);
+  background-color: #fadbdb;
   box-shadow: 5px white;
-  border: 1px solid rgb(92, 1, 1);
+  border: none;
   outline: none;
 }
 
 .Create_Form select {
   resize: none;
-  color: white;
-  background-color: rgb(155, 18, 18);
-  border: 1px solid rgb(92, 1, 1);
+  color: #e98580;
+  background-color:white;
+  border: none;
 }
 
 .Create_Form label {
@@ -66,8 +68,11 @@
 
 .Create_SubmitForm input {
   position: relative;
+  display: flex;
+  align-items: center;
+  align-content:center;
+  justify-content:center;
   left: 215px;
-  /* padding-bottom: 20px; */
   color: rgb(255, 250, 250);
   background-color: #ffa0a0;
   box-shadow: 10px black;
@@ -81,14 +86,12 @@
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   box-shadow: 0 0 5px rgb(12, 8, 0, 0.3);
-  transform: scale(1);
   transition: transform 0.3s ease-in-out;
 }
 
 .Create_SubmitForm input:hover {
   position: relative;
   left: 215px;
-  /* padding-bottom: 20px; */
   color: #ffa0a0;
   background-color: #ffe3e3;
   box-shadow: 10px black;

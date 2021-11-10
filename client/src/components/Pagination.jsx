@@ -1,5 +1,5 @@
+import "./Pagination.css";
 import React from "react";
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export function Pagination({ postsPerPage, totalPosts, paginate }) {
   const pageNumbers = [];
@@ -11,9 +11,9 @@ export function Pagination({ postsPerPage, totalPosts, paginate }) {
   return (
     <div>
       <nav>
-        <ul className="">
+        <ul>
           {pageNumbers.map((number, id) => (
-            <button key={id} onClick={() => paginate(number)} className="">
+            <button key={id} onClick={() => paginate(number)} className="paginate">
               {number}
             </button>
           ))}
@@ -23,8 +23,3 @@ export function Pagination({ postsPerPage, totalPosts, paginate }) {
   );
 }
 
-{
-  /* <button className='buttons' disabled={page -1 === 0} onClick={()=> {changePage(page -1)}}><IoIosArrowBack/></button>
-                    <label>{number}</label>
-                <button className='buttons' disabled={recipes?.count <= (page * 5)} onClick={()=>{changePage(page +1)}}><IoIosArrowForward/></button> */
-}

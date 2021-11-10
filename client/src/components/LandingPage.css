@@ -14,9 +14,9 @@
 
   cursor: pointer;
   border: solid 2px transparent;
-  border-radius: 999px;
-  /* width: 3rem;
-    height: 3rem; */
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
 
   outline: none !important;
   animation-duration: 1.5s;
@@ -30,12 +30,8 @@
 
 @keyframes logo {
   50% {
-    width: 700px;
-    height: 300px;
-  }
-
-  50% {
-    width: 600px;
-    height: 200px;
+    width: 12rem;
+    height: 12rem;
+  
   }
 }

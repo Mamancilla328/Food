@@ -17,7 +17,7 @@ const getApiInfo = async () => {
       summary: e.summary,
       score: e.spoonacularScore,
       healthScore: e.healthScore,
-      instructions: e.analyzedInstructions.map((e) => e.steps.step),
+      instructions: e.analyzedInstructions.map((e) => e.analyzedInstructions),
   }));
   return apiInfo;
 };

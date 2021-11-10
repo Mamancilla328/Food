@@ -2,7 +2,7 @@
 
 .Search {
   color: #ffa0a0;
-  background-color: #fadbdb;
+  background-color: #ffe3e3;
   border: none;
   border-radius: 9999px;
   font-family: "Poppins", sans-serif;
@@ -11,8 +11,14 @@
   width: 250px;
 }
 .Search:hover {
-  background-color: #ffe3e3;
+  background-color:white;
+  color: #ffa0a0;
 }
+
+.Search::placeholder{
+  color: #ffa0a0
+}
+
 
 .lupa {
   display: flex;

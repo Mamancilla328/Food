@@ -22,13 +22,14 @@ function Recipe(props) {
   if (!recipe) {
     return <div> loding...</div>;
   }
+  console.log(recipe)
 
   return (
     <div>
       <button onClick={goToBack} className="btn">
         <IoMdArrowBack />
       </button>
-      <div className="Container">
+      <div className="Boxcontainer">
         <div className="CardDetails">
           <div>
             <h2>{recipe.name}</h2>
