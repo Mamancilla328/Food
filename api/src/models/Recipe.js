@@ -38,12 +38,3 @@ module.exports = (sequelize) => {
     },
   });
 };
-
-// [ ] Receta con las siguientes propiedades:
-// ID: *
-// Nombre *
-// Resumen del plato *
-// Puntuación
-// Nivel de "comida saludable"
-// Paso a paso
-// (+ DIETAS)

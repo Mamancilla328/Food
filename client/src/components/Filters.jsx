@@ -7,7 +7,6 @@ import "./Filters.css";
 function Order(){
 
    let dispatch = useDispatch()
-//    const { name, page } = useSelector(state=> state)
     
    const allDiets = useSelector(store => store.diets)
 
@@ -25,10 +24,6 @@ function Order(){
         dispatch(OrderDiet(event.target.value))
     }
 
-    // const handleSelect = (e)=>{
-    //    dispatch(setOrder(e.target.value))
-    //     dispatch(getRecipes({name, page, order:e.target.value}))
-    // }
     return (
         <div className="filterContainers">
         <div>
@@ -53,55 +48,8 @@ function Order(){
 
 export default Order
 
-// import "./Order.css"
-// import React from 'react'
-// import  { useState, useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux'
-// import { getRecipes,setOrder } from '../Redux/Actions'
-// import {lastScore, topScore} from './constants'
 
 
-
-// function Order() {
-
-//     const { name, page, recipes } = useSelector(state=> state)
-//     const [order] = useState({ type: '' })
-//     const dispatch = useDispatch()
-
-//     const handleSubmit = (e) => {
-//         if (order.type === 'scorefirst') {
-//         	setOrder(prev => ({ ...prev, type: e.target.value }));
-//         	return topScore(recipes);
-//         };
-//         if (order.type === 'scorelast') {
-//         	setOrder(prev => ({ ...prev, type: e.target.value }));
-//         	return lastScore(recipes);
-//         };
-//     };
-
-
-//     const handleSelect = (e)=>{
-//        dispatch(setOrder(e.target.value))
-//         dispatch(getRecipes({name, page, order:e.target.value}))
-//     }
-
-//     return (
-//         <>
-//         <div className= "AtoZ">
-//             <select onChange={handleSelect} className="order">     
-//                 <option selected value="asc">Aa-Zz</option>
-//                 <option value="desc">Zz-Aa</option>  
-//             </select>
-//         </div>
-//         <div className= "Score">
-//             <select onChange={handleSubmit} className="score">     
-//                 <option value='scorefirst'>Top Score</option>
-//  		        <option value='scorelast'>Last Score</option>
-//             </select>
-//         </div>
-//         </>
-//     )
-// }
 
 
 

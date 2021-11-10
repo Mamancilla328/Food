@@ -1,6 +1,6 @@
 import "./NavBar.css"
 import React from "react"
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Search from "./Search.jsx"
 import Filters from "./Filters"
 import { IoIosAddCircle, IoIosHome } from "react-icons/io";
@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <div className= "Container">
 
-            <NavLink to="/home" className="homeAdd"><IoIosHome/></NavLink>
+            <a href="/home" className="homeAdd"><IoIosHome/></a>
             <Search/>
             <div className="extra">
             <Filters className="order"/>

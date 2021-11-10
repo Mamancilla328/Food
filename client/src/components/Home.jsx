@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import {getRecipes} from "../Redux/Actions.js";
 import Card from "./Card.jsx"
 import { Pagination } from "./Pagination";
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 
@@ -45,9 +44,9 @@ const Home = () => {
         <div className='container'>
             <div className='buttsBox'>
             {
-                currentPosts.map((e)=>{
-                    return <Card image={e.image} name={e.name} id={e.id} diets= {e.diets} />
-                })
+                currentPosts.map(({id, image, name, diets})=>
+                   <Card key={id} image={image} name={name} id={id} diets={diets}/>
+                )
             }
             </div>
 

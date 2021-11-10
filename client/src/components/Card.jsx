@@ -1,7 +1,5 @@
 import "./Card.css"
 import React from "react"
-// import { useDispatch } from 'react-redux';
-// import { getRecipe } from '../Redux/Actions.js';
 import { NavLink } from "react-router-dom";
 
 const Card = ({image,name,id, diets,score}) => {
