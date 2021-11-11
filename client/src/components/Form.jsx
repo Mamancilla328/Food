@@ -7,9 +7,9 @@ export default function Form() {
   const dispatch = useDispatch();
 
   const [recipeInfo, setRecipeInfo] = useState({
-    title: "",
+    name: "",
     summary: "",
-    spooncularScore: "",
+    score: "",
     healthScore: "",
     instructions: "",
     image: "",
@@ -52,8 +52,8 @@ export default function Form() {
           <input
             placeholder="Name"
             type="text"
-            name="title"
-            value={recipeInfo.title}
+            name="name"
+            value={recipeInfo.name}
             onChange={HandleChange}
             required
           />
@@ -76,8 +76,8 @@ export default function Form() {
             type="number"
             min="0"
             max="100"
-            name="spoonacularScore"
-            value={recipeInfo.spoonacularScore}
+            name="score"
+            value={recipeInfo.score}
             onChange={HandleChange}
             required
           />
@@ -100,8 +100,8 @@ export default function Form() {
           <textarea
             placeholder="Step by Step..."
             type="text"
-            name="analyzedInstructions"
-            value={recipeInfo.analyzedInstructions}
+            name="instructions"
+            value={recipeInfo.instructions}
             onChange={HandleChange}
             required
           />
